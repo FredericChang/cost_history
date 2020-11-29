@@ -18,5 +18,24 @@
 
 🍑🍑App building Steps🍑🍑
 
-- [x] Add pricelist
-- [ ] 
+- [x] Add pricelist with PropType
+- [x] Add TotalPrice with PropType
+- [ ] Add MonthSelector
+
+
+
+
+
+pricelist 
+
+- [x] map  function
+- [x] Ionicon function
+- [x] PropTypes ( define and defaultProps)
+
+MonthSelector
+
+- [ ] to build a button
+- [ ] to build a toggle list with hide property
+- [ ] user could select month and year
+- [ ] to have a highlight function
+- [ ] two selection month and year
