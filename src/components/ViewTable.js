@@ -9,7 +9,7 @@ const gernerateLinkClass = ( current, view ) => {
 
 const ViewTab = ({ activeTab, onTabChange}) => (
     <ul className="nav nav-tabs nav-fill my-4">
-        <li className="nav=item">
+        <li className="nav-item">
             <a className={gernerateLinkClass(activeTab, LIST_VIEW)} 
                 href="#"
                 onClick={(event) => {event.preventDefault(); onTabChange(LIST_VIEW)}}
@@ -24,7 +24,7 @@ const ViewTab = ({ activeTab, onTabChange}) => (
             LIST MODE
             </a>
         </li>
-        <li className="nav=item">
+        <li className="nav-item">
             <a className={gernerateLinkClass(activeTab, CHART_VIEW)} 
                href="#"
                onClick={(event) => {event.preventDefault(); onTabChange(CHART_VIEW)}}

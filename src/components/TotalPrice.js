@@ -13,8 +13,8 @@ const TotalPrice = ( { income, outcome } ) => (
     </div>
   )
 
-TotalPrice.PropTypes = {
-    inCome: PropTypes.number.isRequired,
-    outCome: PropTypes.number.isRequired,
+TotalPrice.propTypes = {
+    income: PropTypes.number.isRequired,
+    outcome: PropTypes.number.isRequired,
 }
 export default TotalPrice

@@ -38,7 +38,7 @@ const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
                             />
                         </a>
                         <a  role="button" className="col-1"
-                                onClick={() => {onDeleteItem(item)}}
+                                onClick={() => {onDeleteItem( )}}
                         >
                             <Ionicon
                                 className="rounded-circle"
@@ -56,7 +56,7 @@ const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
     )
 }
 
-PriceList.prototype = {
+PriceList.propTypes = {
     items: PropTypes.array.isRequired,
     onModifyItem: PropTypes.func.isRequired,
     onDeleteItem: PropTypes.func.isRequired,
