@@ -34,8 +34,16 @@ pricelist
 
 MonthSelector
 
-- [ ] to build a button
-- [ ] to build a toggle list with hide property
-- [ ] user could select month and year
-- [ ] to have a highlight function
-- [ ] two selection month and year
+- [x] to build a button
+
+- [x] to build a toggle list with hide property (to build with state)
+
+  ＝＞[事件處理](https://zh-hant.reactjs.org/docs/handling-events.html)　
+
+- [x] user could select month and year
+
+  ＝＞GRID SYSTEM
+
+- [x] to have a highlight function
+
+- [x] two selection month and year

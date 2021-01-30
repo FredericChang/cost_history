@@ -12,6 +12,5 @@ describe('test TotalPrice component', () => {
         const wrapper = shallow(<TotalPrice {...props}/>)
         expect(wrapper.find('.income span').text() *1).toEqual(1000)
         expect(wrapper.find('.outcome span').text()*1).toEqual(2000)
-
     })
 })

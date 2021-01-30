@@ -38,7 +38,7 @@ const PriceList = ({ items, onModifyItem, onDeleteItem }) => {
                             />
                         </a>
                         <a  role="button" className="col-1"
-                                onClick={() => {onDeleteItem( )}}
+                                onClick={() => {onDeleteItem(item)}}
                         >
                             <Ionicon
                                 className="rounded-circle"
