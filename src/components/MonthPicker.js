@@ -52,22 +52,22 @@ class MonthPicker extends React.Component {
                 { isOpen && 
                     <div className="dropdown-menu" style={{display:'block'}}>
                         <div className="row">
-                            <div className="col border-right">
+                            <div className="col border-right years-range">
                                 {yearRange.map((yearNumber, index) =>
                                     <a key={index} 
-                                        href='#'
+                                        role="button"
                                         onClick={(event) => {this.selectedYear(event,yearNumber)}}
                                         className={(yearNumber === selectedYear) ? 'dropdown-item active' : 'dropdown-item' }>
                                         {yearNumber} Year
                                     </a>
                                 )}
                             </div>
-                            <div className="col">
+                            <div className="col months-range">
                                 {monthRange.map((monthNumber, index) =>
                                     <a key={index} 
-                                    href='#'
+                                    role="button"
                                     onClick={(event) => {this.selectedMonth(event,monthNumber)}}
-                                    className={(monthNumber === year) ? 'dropdown-item active' : 'dropdown-item' }>
+                                    className={(monthNumber === month) ? 'dropdown-item active' : 'dropdown-item' }>
                                         {padLeft(monthNumber)} Month
                                     </a>
                                 )}
