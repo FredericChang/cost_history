@@ -12,6 +12,22 @@ class MonthPicker extends React.Component {
             selectedYear: this.props.year, //initializing Vlaue
         }
     }
+
+    componentDidMount() {
+        document.addEventListener('click', this.handleClick, false)
+    }
+    componentWillUnmount() {
+        document.removeEventListener('click', this.handleClick, false)
+    }
+
+    handleClick = (event) => {
+        if (this.node.contains(event.target)) {
+            return;
+        }
+        this.setState({
+            isOpen: false,
+        })
+    }
     toggleDropdown = (event) => {
         event.preventDefault();
         this.setState({
@@ -41,7 +57,7 @@ class MonthPicker extends React.Component {
         const monthRange = range(12,1)
         const yearRange = range(9, -4).map(number => number+year)
         return (
-            <div className="dropdown month-picker-compoent">
+            <div className="dropdown month-picker-compoent" ref= {(ref) => { this.node = ref}}>
                 <h4> choose month</h4>
                 <button className="btn btn-lg btn-secondary dropdown-toggle"
                         onClick={this.toggleDropdown}

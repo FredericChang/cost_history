@@ -24,24 +24,31 @@ const categories = {
 const items = [
     {
       "id":1,
-      "title": "germany",
+      "title": "asd",
       "price": 200,
       "date": "2018-09-10",
       "cid" : 1
     },
     {
       "id":2,
-      "title": "germany",
+      "title": "asdasd",
       "price": 200,
       "date": "2018-09-10",
       "cid" : 2
-    }
+    },
+    {
+        "id":3,
+        "title": "germasdany",
+        "price": 200,
+        "date": "2018-10-10",
+        "cid" : 1
+      }
 ]
 const newItem = {
-    "id":3,
+    "id":1,
     "title": "germany",
     "price": 400,
-    "date": "2020-09-10",
+    "date": "2018-10-10",
     "cid" : 1
 }
 
@@ -50,7 +57,7 @@ const newItem = {
           super(props)
           this.state = {
               items,
-              currentDate : parseToYearYearAndMonth(),
+              currentDate : parseToYearYearAndMonth('2018/10/01'),
               tabView: LIST_VIEW,
           }
       }
@@ -112,7 +119,7 @@ const newItem = {
                 <React.Fragment>
                     <header className="App-hedaer">
                         <div className="row mb-5">
-
+                            
                         </div>
                         <div className="row">
                             <div className="col">
@@ -134,14 +141,14 @@ const newItem = {
                         <ViewTab activeTab={tabView} onTabChange={this.changeView}/>
                         <CreateBtn onClick={this.createItem} />
                         { tabView === LIST_VIEW &&
-                        <PriceList
-                            items={itemsWithCategory}
-                            onModifyItem={this.modifyItem}
-                            onDeleteItem={this.deleteItem}
-                        /> 
+                            <PriceList
+                                items={itemsWithCategory}
+                                onModifyItem={this.modifyItem}
+                                onDeleteItem={this.deleteItem}
+                            /> 
                         }
                         { tabView === CHART_VIEW &&
-                        <h1> hhhh </h1>
+                            <h1 className="chart-title">  Chart Here </h1>
                         }
                     </div>
                 </React.Fragment>
