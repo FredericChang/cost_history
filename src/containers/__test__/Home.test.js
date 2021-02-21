@@ -1,6 +1,6 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import Home, { items } from '../Home'
+import Home, { items,newItem } from '../Home'
 
 import ViewTab from '../../components/ViewTable';
 import TotalPrice from '../../components/TotalPrice';
