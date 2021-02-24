@@ -6,6 +6,7 @@ import TotalPrice from '../components/TotalPrice';
 import {LIST_VIEW, CHART_VIEW, TYPE_INCOME, TYPE_OUTCOME, parseToYearYearAndMonth, padLeft} from '../utility';
 import MonthPicker from '../components/MonthPicker'
 import CreateBtn from '../components/CreateBtn'
+import PriceForm from '../components/PriceForm'
 
 const categories = {
     "1" : {
@@ -118,6 +119,7 @@ const newItem = {
             return (
                 <React.Fragment>
                     <header className="App-hedaer">
+                        <PriceForm/>
                         <div className="row mb-5">
                             
                         </div>
