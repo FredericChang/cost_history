@@ -7,6 +7,8 @@ import {LIST_VIEW, CHART_VIEW, TYPE_INCOME, TYPE_OUTCOME, parseToYearYearAndMont
 import MonthPicker from '../components/MonthPicker'
 import CreateBtn from '../components/CreateBtn'
 import PriceForm from '../components/PriceForm'
+import {Tabs, Tab} from '../components/Tabs'
+import Ionicon from 'react-ionicons';
 
 const categories = {
     "1" : {
@@ -52,20 +54,20 @@ const newItem = {
     "date": "2018-10-10",
     "cid" : 1
 }
-
+ const tabsText = [LIST_VIEW, CHART_VIEW]
   class Home extends Component {
       constructor(props) {
           super(props)
           this.state = {
               items,
               currentDate : parseToYearYearAndMonth('2018/10/01'),
-              tabView: LIST_VIEW,
+              tabView: tabsText[0],
           }
       }
       // view is from ViewTable
-      changeView = (view) => {
+      changeView = (index) => {
           this.setState({
-              tabView: view,
+              tabView: tabsText[index],
           })
       }
       changeDate = (year, month) => { 
@@ -119,9 +121,7 @@ const newItem = {
             return (
                 <React.Fragment>
                     <header className="App-hedaer">
-                        <PriceForm/>
                         <div className="row mb-5">
-                            
                         </div>
                         <div className="row">
                             <div className="col">
@@ -140,6 +140,27 @@ const newItem = {
                         </div>
                     </header>
                     <div className="content-area py-3 px-3"> 
+                        <Tabs activeIndex={0} onTabChange={this.changeView}>
+                            <Tab>
+                            <Ionicon
+                                className="rounded-circle mr-2"
+                                fontSize="25px"
+                                sytle={{ backgroundColor: '#007bff', padding: '5px'}}
+                                color={'#007bff'}
+                                icon='ios-paper'
+                            />
+                            LIST MODE
+                            </Tab>
+                            <Tab>
+                            <Ionicon
+                                className="rounded-circle mr-2"
+                                fontSize="25px"
+                                sytle={{ backgroundColor: '#007bff', padding: '5px'}}
+                                color={'#007bff'}
+                                icon='ios-pie'
+                            />
+                                GRAPH MODE</Tab>
+                        </Tabs>
                         <ViewTab activeTab={tabView} onTabChange={this.changeView}/>
                         <CreateBtn onClick={this.createItem} />
                         { tabView === LIST_VIEW &&
