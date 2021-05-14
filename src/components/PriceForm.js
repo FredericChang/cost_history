@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { isValidDate } from '../utility'
 
+
+
 class PriceForm extends React.Component {
     static propTypes = {
         onFormSubmit: PropTypes.func.isRequired,
