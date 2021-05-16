@@ -40,3 +40,16 @@ export const isValidDate = (dateString) => {
     if(Number.isNaN(d.getTime())) return false; // Invalid date
     return d.toISOString().slice(0,10) === dateString;
   }
+
+export const flatternArr = (arr) => {
+    return arr.reduce((map, item) => {
+       map[item.id] = item
+       return map 
+    }, {})
+}
+
+//map is previous value
+//item is current value
+//map will be onject
+//{} means default as empty object
+// this function will converter arr into object
